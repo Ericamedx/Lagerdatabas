@@ -1,0 +1,38 @@
+.around {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+body {
+  background-color: lightgray;
+  font-size: 20px;
+}
+
+.start_page {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
+button {
+  margin: 5px;
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+}
+.activetab {
+  background-color: lightblue;
+}
+.reportInOut {
+  font-size: 10px;
+}

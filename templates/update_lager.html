@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Arbetsprov</title>
+  <link rel="stylesheet" href="/static/index.css">
+  <script src="/static/client.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div class="around">
+    <div class="buttons">
+      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo</button>
+      <button onclick="location.href='/update_lager'" class="tabbuttons">Uppdatera lagersaldo</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera in/ut leverans</button>
+      <button onclick="location.href='/new_product'" class="tabbuttons">Lägg till ny produkt</button>
+      <button onclick="location.href='/new_lager'" class="tabbuttons">Lägg till nytt lager</button>
+    </div>
+
+    <div class="start_page">
+      <div class="pages" id="updateStock">
+        <p>Rapportera Lagerstatus</p>
+        <form id="update_lager" method="post">
+
+          <div class="productIn"> <!-- Vilken produkt som ska updateras -->
+            <label for="product">Produktnamn</label>
+            <input type="text" id= "product" name="product" required>
+          </div>
+
+          <div class="city"> <!-- Vilken stad som produkten finns i -->
+            <label for="city">Stad</label>
+            <input type="text" id= "city" name="city" required>
+          </div>
+
+          <div class="productAmount"> <!-- Antal som skickas -->
+            <label for="amount">Hur många artiklar finns i lagret?</label>
+            <input type="text" id= "amount" name="amount" required>
+          </div>
+          <button type="submit">skicka</button>
+        </form>
+
+        <p id="errormessage"> test: {{data}}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

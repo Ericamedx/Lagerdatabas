@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Arbetsprov</title>
+  <link rel="stylesheet" href="/static/index.css">
+
+</head>
+
+<body>
+  <div class="around">
+    <div class="buttons">
+      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo</button>
+      <button onclick="location.href='/update_lager'" class="tabbuttons">Uppdatera lagersaldo</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera in/ut leverans</button>
+      <button onclick="location.href='/new_product'" class="tabbuttons">Lägg till ny produkt</button>
+      <button onclick="location.href='/new_lager'" class="tabbuttons">Lägg till nytt lager</button>
+    </div>
+    <div class="start_page">
+      <div class="pages" id="update_inout">
+        <p>Rapportera in/ut leverans</p>
+        <form id="reportInOut" method="post">
+
+          <div class="productInOut"> <!-- Vilken produkt som skickas -->
+            <label for="product">Produktnamn</label>
+            <input type="text" id= "product" name="product" required>
+          </div>
+
+          <div class="cityIn"> <!-- Vilken stad som produkten anländer i -->
+            <label for="cityTo">Stad Till</label>
+            <input type="text" id= "cityTo" name="city to" required>
+          </div>
+
+          <div class="cityOut"> <!-- Vilken stad som produkten skickas från -->
+            <label for="cityFrom">Stad från</label>
+            <input type="text" id= "cityFrom" name="city from" required>
+          </div>
+
+          <div class="productAmountOut"> <!-- Antal som skickas -->
+            <label for="amountOut">Hur många artiklar skickas?</label>
+            <input type="text" id= "amountOut" name="amount out" required>
+          </div>
+          <button type="submit">skicka</button>
+        </form>
+
+        <p id="errormessage"> test: {{data}}</p>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

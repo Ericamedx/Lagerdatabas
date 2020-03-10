@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Arbetsprov</title>
+  <link rel="stylesheet" href="/static/index.css">
+  <script src="/static/client.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div class="around">
+    <div class="buttons">
+      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo</button>
+      <button onclick="location.href='/update_lager'" class="tabbuttons">Uppdatera lagersaldo</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera in/ut leverans</button>
+      <button onclick="location.href='/new_product'" class="tabbuttons">Lägg till ny produkt</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons">Lägg till nytt lager</button>
+    </div>
+
+    <div class="start_page">
+    <p>Vilket lager vill du se?</p>
+    <form id="checkLager" method="post">
+
+      <div class="newLagerID"> <!-- Vilket lager ID -->
+        <label for="city">City</label>
+        <input type="text" id= "city" name="city" required>
+      </div>
+
+      <button type="submit">skicka</button>
+    </form>
+
+    <p id="showLagerInfo">I {{city}} finns : {{data}} </p>
+    </div>
+  </div>
+</body>
+</html>
