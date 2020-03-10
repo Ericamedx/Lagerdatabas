@@ -1,8 +1,8 @@
 CREATE TABLE inout (
     datePosted TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     product VARCHAR(200) NOT NULL,
-    toCity VARCHAR(200) NOT NULL,
-    fromCity VARCHAR(200) NOT NULL,
+    cityTo VARCHAR(200) NOT NULL,
+    cityFrom VARCHAR(200) NOT NULL,
     amount INT NOT NULL
 );
 

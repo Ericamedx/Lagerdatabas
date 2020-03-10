@@ -35,6 +35,9 @@ def query_db_all(query, args=()):
     cursor.close()
     return result
 
+def inoutlager(product, cityTo, cityOut, amount): #kolla mer på denna
+    return query_db_all('update lagersaldo values (?, ?, ?) where city = ?', (product, cityTo, cityFrom, amount))
+
 def updatelager(product, city, amount):
     return query_db('insert into lagersaldo values (?, ?, ?)', (product, city, amount))
 

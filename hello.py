@@ -8,10 +8,18 @@ def hello_world():
 
 @app.route('/update_inout', methods = ['POST', 'GET'])
 def update():
-    test = ""
+    addProduct = ""
+    addCityTo = ""
+    addCityFrom = ""
+    addAmount = ""
     if(request.method == "POST"):
-        test = request.form['product']
-    return render_template('update_inout.html', data=test)
+        addProduct = request.form['product']
+        addCityTo = request.form['cityTo']
+        addCityFrom = request.form['cityFrom']
+        addAmount = request.form['amountout']
+
+        database_helper.inoutlager(addProduct, addCityTo, addCityFrom, addAmount)
+    return render_template('update_inout.html')
 
 @app.route('/update_lager', methods = ['POST', 'GET'])
 def update_lager():
