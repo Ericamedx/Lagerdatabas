@@ -1,9 +1,9 @@
 .around {
-  width: 75%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
   background-color: white;
 }
 
@@ -29,11 +29,9 @@ input {
 }
 
 .buttons button {
-  margin-left: auto;
-  margin-right: auto;
   margin: 5px;
-  width: 130px;
-  height: 80px;
+  width: 18%;
+  height: 110px;
   font-size: 20px;
   border: none;
   border-radius: 4px;

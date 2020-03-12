@@ -11,11 +11,11 @@
 <body>
   <div class="around">
     <div class="buttons">
-      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo</button>
+      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo för stad</button>
       <button onclick="location.href='/update_lager'" class="tabbuttons">Uppdatera lagersaldo</button>
-      <button onclick="location.href='/update_inout'" class="tabbuttons activetab">Rapportera in/ut leverans</button>
-      <button onclick="location.href='/new_product'" class="tabbuttons">Lägg till ny produkt</button>
-      <button onclick="location.href='/new_lager'" class="tabbuttons">Lägg till eller ta bort lager</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons activetab">Rapportera leverans</button>
+      <button onclick="location.href='/new_product'" class="tabbuttons">Skapa ny produkt</button>
+      <button onclick="location.href='/new_lager'" class="tabbuttons">Skapa ett nytt lager</button>
     </div>
     <div class="start_page">
       <div class="pages" id="update_inout">
@@ -44,8 +44,18 @@
           <button type="submit" class="submitButton">skicka</button>
         </form>
 
-        <p id="errormessage"> test: {{data}}</p>
-      </div>
+        <p>{{data}}</p>
+
+        <p>Tidigare leveranserna : </p>
+        <p id = "inOutHistory"></p>
+        <script>
+          inOutHistory = document.getElementById('inOutHistory');
+          var myData = {{data1|tojson}};
+
+          for( let i = 0; i < myData.length; i++){
+            inOutHistory.innerHTML += myData[i][0] + " Produkt: " +  myData[i][1] + " Stad till: " + myData[i][2] + " Stad från: " +  myData[i][3] + " Antal: " + myData[i][4] + " " +  "<br/><br/>";
+          }
+        </script>
     </div>
     </div>
 </body>

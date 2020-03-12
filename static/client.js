@@ -17,9 +17,9 @@ function addInOut(){
 
 function updateLagersaldo(){
   var formObj = {
-  product : document.getElementById('product').value;
-  city : document.getElementById('city').value;
-  amount : document.getElementById('amount').value;
+  product : document.getElementById('product').value,
+  city : document.getElementById('city').value,
+  amount : document.getElementById('amount').value
   };
 
   var formData = new FormData();

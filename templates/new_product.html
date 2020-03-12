@@ -12,12 +12,46 @@
 <body>
   <div class="around">
     <div class="buttons">
-      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo</button>
+      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo för stad</button>
       <button onclick="location.href='/update_lager'" class="tabbuttons">Uppdatera lagersaldo</button>
-      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera in/ut leverans</button>
-      <button onclick="location.href='/new_product'" class="tabbuttons activetab">Lägg till ny produkt</button>
-      <button onclick="location.href='/new_lager'" class="tabbuttons">Lägg till eller ta bort lager</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera leverans</button>
+      <button onclick="location.href='/new_product'" class="tabbuttons activetab">Skapa ny produkt</button>
+      <button onclick="location.href='/new_lager'" class="tabbuttons">Skapa ett nytt lager</button>
     </div>
+    <div class="start_page">
+    <p>Rapportera in ny produkt</p>
+    <form id="createProduct" onsubmit="return createProduct()" method="post">
+
+      <div class="newProduct"> <!-- Vilket lager som ska läggas till -->
+        <label for="product">Produktnamn</label>
+        <input type="text" id= "product" name="product" required>
+      </div>
+
+      <div class="newAmount">
+        <label for="ProduktID">ProduktID</label>
+        <input type="text" id= "productID" name="productID" required>
+      </div>
+
+<!--
+      <div class="newLager">
+        <label for="lager">Lager</label>
+        <input type="text" id= "lager" name="lager" required>
+      </div>
+
+      <div class="newAmount">
+        <label for="amount">Antal</label>
+        <input type="text" id= "amount" name="amount" required>
+      </div>-->
+
+      <div class="newAmount">
+        <label for="Price">Pris</label>
+        <input type="text" id= "price" name="price" required>
+      </div>
+
+      <button type="submit" class="submitButton">skicka</button>
+    </form>
+
+    <p id="errormessage"> {{data}} </p>
   </div>
 </body>
 </html>

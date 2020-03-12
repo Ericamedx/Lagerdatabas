@@ -12,14 +12,16 @@
 <body>
   <div class="around">
     <div class="buttons">
-      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo</button>
+      <button onclick="location.href='/home_page'" class="tabbuttons">Se lagersaldo för stad</button>
       <button onclick="location.href='/update_lager'" class="tabbuttons activetab">Uppdatera lagersaldo</button>
-      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera in/ut leverans</button>
-      <button onclick="location.href='/new_product'" class="tabbuttons">Lägg till ny produkt</button>
-      <button onclick="location.href='/new_lager'" class="tabbuttons">Lägg till eller ta bort lager</button>
+      <button onclick="location.href='/update_inout'" class="tabbuttons">Rapportera leverans</button>
+      <button onclick="location.href='/new_product'" class="tabbuttons">Skapa ny produkt</button>
+      <button onclick="location.href='/new_lager'" class="tabbuttons">Skapa ett nytt lager</button>
     </div>
 
     <div class="start_page">
+      <h4>OBS varan du ska uppdatera måste finnas inlagd som produkt!</h4>
+      <p>Skriv "-" för att ta bort varor från lager</p>
       <div class="pages" id="updateStock">
         <p>Rapportera Lagerstatus</p>
         <form id="update_lager" method="post">
